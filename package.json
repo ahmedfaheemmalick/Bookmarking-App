@@ -22,12 +22,13 @@
     "@mui/material": "^5.0.2",
     "apollo-server-lambda": "^2.25.2",
     "cross-fetch": "^3.0.6",
+    "dotenv": "^10.0.0",
+    "faunadb": "^3.0.1",
     "formik": "^2.2.9",
     "gatsby": "^2.24.34",
     "graphql": "^14.7.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "yup": "^0.32.9",
-    "faunadb": "^3.0.1"
+    "yup": "^0.32.9"
   }
 }

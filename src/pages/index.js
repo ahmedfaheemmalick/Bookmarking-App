@@ -30,7 +30,6 @@ const Home = () => {
 
   console.log(loading);
   console.log(error);
-  console.log("data", data);
 
   return (
     <div className={styles.container}>
