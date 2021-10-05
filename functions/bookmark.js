@@ -16,8 +16,8 @@ const typeDefs = gql`
 
   type Bookmark {
     id: ID!
-    url: String!
-    name: String!
+    url: String
+    name: String
   }
 `;
 
