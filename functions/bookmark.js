@@ -19,7 +19,7 @@ const typeDefs = gql`
 `;
 
 const client = new faunadb.Client({
-  secret: process.env.FAUNADB_ADMIN_SECRET,
+  secret: "fnAEUsbXcZAAxInPVbLKma44CsCJW0BFu3grfFRB",
   // domain: "db.eu.fauna.com",
 });
 
