@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin-top: 5rem !important;
+  width: 27%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.textfield {
+  margin-top: 20px !important;
+  outline: #000 !important;
+}
+
+.btn {
+  width: 100%;
+  margin-top: 30px !important;
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.bookmarks {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.bookmarks li {
+  text-align: center;
+}
+
+.bookmarks a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+}

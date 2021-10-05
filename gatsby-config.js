@@ -1,8 +1,5 @@
 module.exports = {
-    siteMetadata: {
-        siteUrl: `https://www.yourdomain.tld`,
-    },
-    plugins: [
-
-    ]
-}
+  siteMetadata: {
+    siteUrl: `http://a-bookmarking-app.netlify.app`,
+  },
+};

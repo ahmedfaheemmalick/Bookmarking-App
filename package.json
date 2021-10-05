@@ -16,8 +16,17 @@
   },
   "license": "0BSD",
   "dependencies": {
-    "gatsby": "^3.13.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "@apollo/client": "^3.1.5",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@mui/material": "^5.0.2",
+    "apollo-server-lambda": "^2.25.2",
+    "cross-fetch": "^3.0.6",
+    "formik": "^2.2.9",
+    "gatsby": "^2.24.34",
+    "graphql": "^14.7.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "yup": "^0.32.9"
   }
 }
