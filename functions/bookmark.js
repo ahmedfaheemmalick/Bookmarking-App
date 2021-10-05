@@ -20,7 +20,7 @@ const typeDefs = gql`
 
 const client = new faunadb.Client({
   secret: process.env.FAUNADB_ADMIN_SECRET,
-  domain: "db.eu.fauna.com",
+  // domain: "db.eu.fauna.com",
 });
 
 const resolvers = {
