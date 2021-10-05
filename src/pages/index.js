@@ -59,18 +59,6 @@ const Home = () => {
           <Form className={styles.form} onSubmit={handleSubmit}>
             <Field
               className={styles.textfield}
-              label="Url"
-              placeholder="Url"
-              as={TextField}
-              variant="outlined"
-              type="text"
-              name="url"
-              error={errors.url && touched.url}
-              helperText={<ErrorMessage name="url" />}
-            />
-            <br />
-            <Field
-              className={styles.textfield}
               label="Name"
               placeholder="Name"
               as={TextField}
@@ -79,6 +67,18 @@ const Home = () => {
               name="name"
               error={errors.name && touched.name}
               helperText={<ErrorMessage name="name" />}
+            />
+            <br />
+            <Field
+              className={styles.textfield}
+              label="Url"
+              placeholder="Url"
+              as={TextField}
+              variant="outlined"
+              type="text"
+              name="url"
+              error={errors.url && touched.url}
+              helperText={<ErrorMessage name="url" />}
             />
             <Button className={styles.btn} type="submit">
               Add Bookmark
