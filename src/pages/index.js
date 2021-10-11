@@ -28,8 +28,12 @@ const Home = () => {
   const { data, loading, error } = useQuery(GET_BOOKMARKS);
   const [addBookmark] = useMutation(ADD_BOOKMARK);
 
-  console.log(loading);
-  console.log(error);
+  if (loading) {
+    return <h1>Loading...</h1>
+  }
+  if (error) {
+    return <h1>{JSON.stringify(error, null, 4)}</h1>
+  }
 
   return (
     <div className={styles.container}>

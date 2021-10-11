@@ -1,6 +1,5 @@
 const { ApolloServer, gql } = require("apollo-server-lambda");
-const faunadb = require("faunadb");
-const q = faunadb.query;
+const { Client, query } = require("faunadb");
 const dotenv = require("dotenv");
 
 dotenv.config();
@@ -21,7 +20,7 @@ const typeDefs = gql`
   }
 `;
 
-const client = new faunadb.Client({
+const client = new Client({
   secret: process.env.FAUNADB_ADMIN_SECRET,
   domain: "db.eu.fauna.com",
 });
@@ -31,9 +30,9 @@ const resolvers = {
     bookmarks: async () => {
       try {
         const result = await client.query(
-          q.Map(
-            q.Paginate(q.Documents(q.Collection("bookmarks"))),
-            q.Lambda((x) => q.Get(x))
+          query.Map(
+            query.Paginate(query.Documents(query.Collection("bookmarks"))),
+            query.Lambda((x) => query.Get(x))
           )
         );
 
@@ -53,7 +52,7 @@ const resolvers = {
     addBookmark: async (_, { url, name }) => {
       try {
         const result = await client.query(
-          q.Create(q.Collection("bookmarks"), {
+          query.Create(query.Collection("bookmarks"), {
             data: {
               url,
               name,
@@ -72,8 +71,6 @@ const resolvers = {
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  introspection: true,
-  playground: true,
 });
 
 exports.handler = server.createHandler();
